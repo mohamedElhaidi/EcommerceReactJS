@@ -18,10 +18,8 @@ import presentPNG from "../../../res/img/present2.png";
 const HomePage = (props) => {
   const [hotDealsProdcts, setHotDealsProdcts] = useState([]);
   useEffect(async () => {
-    if (!hotDealsProdcts.length) setHotDealsProdcts(await getHotDealsProdcts());
-    if (!hotDealsProdcts.length) setHotDealsProdcts(await getHotDealsProdcts());
-    if (!hotDealsProdcts.length) setHotDealsProdcts(await getHotDealsProdcts());
-  }, [hotDealsProdcts]);
+    setHotDealsProdcts(await getHotDealsProdcts());
+  }, []);
 
   // title
   useEffect(() => {
