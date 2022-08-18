@@ -6,8 +6,6 @@ import FeaturesSection from "./featuresSection.jsx";
 
 import React, { useEffect, useState } from "react";
 import HorizontalSliderContainer from "../../components/horizontalSlider/horizontalSliderContainer.jsx";
-
-import * as http from "../../../js/services/http/httpService";
 import DoubleSections from "./doubleSections.jsx";
 import { getHotDealsProdcts } from "../../../js/services/productService.js";
 import ProductsContainer from "../../components/productContainer.jsx";
@@ -30,7 +28,6 @@ const HomePage = (props) => {
       <CardsSlider />
 
       {/* <FeaturesSection /> */}
-
       <HorizontalSliderContainer title="HOT DEALS &#128293;" color="orange">
         {hotDealsProdcts.map((prod, key) => (
           <ProductItemCard key={key} product={prod} bestDealDisabled={true} />

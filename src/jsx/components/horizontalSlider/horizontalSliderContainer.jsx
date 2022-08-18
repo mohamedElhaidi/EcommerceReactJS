@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import { HorizontalSliderStyled } from "./horizontalSliderStyled";
-// import "../../css/horizontalSlider/horizontalSlider.css";
-
+import LoadingIcon from "../loadingIcon";
 const HorizontalSliderContainer = ({ color, title, children, style }) => {
   const hozSliderRef = useRef(null);
   const slide = (side) => {
@@ -12,23 +11,24 @@ const HorizontalSliderContainer = ({ color, title, children, style }) => {
       behavior: "smooth",
     });
   };
-  let container = "";
-  if (children)
-    container = (
-      <HorizontalSliderStyled
-        color={color}
-        className="horizontal-slider rounded-small under-shadow"
-      >
-        <h2>{title ? title : "**undefined**"}</h2>
+
+  return (
+    <HorizontalSliderStyled
+      color={color}
+      className="horizontal-slider rounded-small under-shadow"
+    >
+      <h2>{title ? title : "**undefined**"}</h2>
+      {!children.length ? (
+        <LoadingIcon color={color} />
+      ) : (
         <div ref={hozSliderRef} className="items">
           {children}
         </div>
-        <button onClick={() => slide(-1)} className="arrow left-arrow"></button>
-        <button onClick={() => slide(1)} className="arrow right-arrow"></button>
-      </HorizontalSliderStyled>
-    );
-
-  return container;
+      )}
+      <button onClick={() => slide(-1)} className="arrow left-arrow"></button>
+      <button onClick={() => slide(1)} className="arrow right-arrow"></button>
+    </HorizontalSliderStyled>
+  );
 };
 
 export default HorizontalSliderContainer;
