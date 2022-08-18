@@ -1,7 +1,6 @@
 import * as USER from "../../../../js/services/authService";
 import { useState } from "react";
 import { loginSchema } from "../schemas";
-import Joi from "joi";
 import {
   FormTextInput,
   FormSubmitButton,
