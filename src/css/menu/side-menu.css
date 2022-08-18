@@ -1,0 +1,83 @@
+.side-menu-wrap {
+  position: relative;
+  max-width: 300px;
+  min-width: 200px;
+
+  border: solid orange 2px;
+  border-radius: 5px;
+  overflow: hidden;
+  height: fit-content;
+}
+.side-menu-wrap .show-menu-button {
+  display: none;
+}
+.side-menu-wrap .side-menu {
+  background-color: white;
+  padding: 0.2em 0;
+  padding-bottom: 0.5em;
+  /* max-height: 100vh; */
+  /* overflow-x: scroll; */
+  /* overflow-x: hidden; */
+  /* position: fixed; */
+}
+
+.side-menu-wrap .side-menu-group {
+  width: 100%;
+  padding: 0.2em 0;
+}
+.side-menu-wrap .side-menu-buttons-group {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* background-color: black; */
+}
+.side-menu-wrap .side-menu-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.side-menu-wrap .side-menu-group .title {
+  font-size: 1em;
+  font-weight: 500;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  padding: 0.5em 1em 0.2em 1em;
+  text-transform: uppercase;
+}
+
+.side-menu-wrap .side-menu-item {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 0.5em;
+  padding-left: 1.5em;
+  width: 200px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.side-menu-wrap .hoverable:hover {
+  background-color: rgba(5, 5, 5, 0.212);
+}
+
+.side-menu-wrap .side-menu-item * {
+  cursor: pointer;
+  margin: 0 0.2em;
+}
+
+@media all and (max-width: 500px) {
+  .side-menu-wrap {
+    width: 100%;
+    background-color: white;
+  }
+  .side-menu-wrap .side-menu {
+    display: none;
+  }
+  .side-menu-wrap .side-menu.toggle {
+    display: initial;
+  }
+  .side-menu-wrap .show-menu-button {
+    display: block;
+  }
+}

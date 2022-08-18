@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --background: #f2f2f2;
+  --backgroundDarker: #dbdbdb;
+  --orangPrimary: #f68b1e;
+  --orangSecondery: #f4e2cd;
+
+  --maxWidth: 85%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #f2f2f2;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  flex-wrap: nowrap;
+
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1024px;
+  max-width: 1024px;
+}
+
+/* footer  */
+footer {
+  background-color: orange;
+  width: 100%;
+  max-width: 1024px;
+  min-height: 200px;
+  margin-bottom: 1em;
+}
+
+footer ul {
+  list-style: none !important;
+}
+
+.footer-sections-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 1em;
+  /* width: fit-content; */
+  padding: 1em;
+  /* margin: 1em auto; */
+}
+
+.footer-section li {
+  margin: 0.5em 0;
+}
+
+@media all and (max-width: 500px) {
+  footer {
+    width: 100%;
+  }
+
+  .footer-sections-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+svg {
+  width: auto;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited {
+  color: initial;
+}
+button {
+  border-style: none;
+  background-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  main {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    width: 100%;
+  }
+}

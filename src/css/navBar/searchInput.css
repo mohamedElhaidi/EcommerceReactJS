@@ -1,0 +1,158 @@
+/* search bar */
+.searchBar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  background-color: white;
+  width: 100%;
+}
+.searchBar div {
+  width: 100%;
+}
+.searchBar div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+.searchBar .input-group {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  height: 2.4em;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(255, 145, 0);
+}
+.searchBar .searchInput {
+  padding: 0;
+  padding-left: 0.7em;
+  width: 100%;
+  border-style: none;
+  font-size: 1em;
+  font-weight: 400;
+  outline: none;
+  background-color: transparent;
+}
+.searchBar .searchDeleteButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-style: none;
+  background-color: transparent;
+  /* border-radius: 50%; */
+  min-width: 2.4em;
+  min-height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  cursor: pointer;
+}
+.searchBar .searchDeleteButton:hover {
+  background-color: rgb(255, 145, 0);
+}
+.searchBar .searchDeleteButton:hover .line {
+  background-color: white;
+}
+.searchBar .searchDeleteButton .line {
+  position: absolute;
+  width: 1em;
+  height: 2px;
+  background-color: rgb(255, 145, 0);
+  transform-origin: center;
+  border-radius: 5px;
+}
+.searchBar .searchDeleteButton > :first-child {
+  transform: rotate(-45deg);
+}
+.searchBar .searchDeleteButton > :last-child {
+  transform: rotate(45deg);
+}
+.searchBar .result-list-wrap {
+  max-width: 100%;
+  display: none;
+  position: absolute;
+  top: 85%;
+  width: 100%;
+
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.searchBar .load-animation {
+  display: none;
+}
+.searchBar .load-animation.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.searchBar .load-animation .loadImg {
+  width: 2em;
+  animation-name: load;
+  animation-duration: 250ms; /* or: Xms */
+  animation-iteration-count: infinite;
+  animation-direction: normal; /* or: normal */
+  animation-timing-function: ease-in-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+
+  animation-delay: 0ms; /* or: Xms */
+}
+@keyframes load {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.searchBar .result-list-wrap.toggle {
+  display: block;
+  height: fit-content;
+}
+.searchBar .result-list-wrap > .resaultList {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style: none;
+  max-height: fit-content;
+}
+.searchBar .resaultList li {
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1em 1em;
+  margin: 0.2em;
+}
+.searchBar .resaultList li:hover {
+  color: white;
+  background-color: rgb(255, 145, 0);
+}
+
+.searchBar .search-resault-card {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.searchBar .search-resault-card a {
+  width: 100%;
+  height: 100%;
+}
+.searchBar .search-resault-card .preview {
+  width: 50px;
+  height: 50px;
+}
+.searchBar .search-resault-card .title {
+  font-size: 0.98em;
+}

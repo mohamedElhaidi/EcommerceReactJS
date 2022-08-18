@@ -1,0 +1,34 @@
+.itemCounter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--background);
+  border-radius: 5px;
+  overflow: hidden;
+  width: fit-content;
+  font-size: 1em;
+}
+
+.itemCounter > * {
+  width: fit-content;
+  min-width: 50px;
+  padding: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.itemCounter button {
+  font-weight: 700;
+  width: 100%;
+  color: var(--orangPrimary);
+  border-style: none;
+  cursor: pointer;
+}
+
+.itemCounter button:hover {
+  background-color: var(--orangPrimary);
+  color: white;
+}

@@ -1,0 +1,43 @@
+/* .orange-lite-button {
+  display: block;
+  background-color: transparent;
+  color: var(--orangPrimary);
+  border-style: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+.orange-lite-button:hover {
+  background-color: var(--orangSecondery);
+}
+
+
+.orange-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: none;
+
+  background-color: var(--orangPrimary);
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+
+  cursor: pointer;
+}
+
+.orange-button > * {
+  color: inherit;
+}
+.orange-button svg {
+  fill: white;
+  width: 1.5em;
+  height: 1.5em;
+} */

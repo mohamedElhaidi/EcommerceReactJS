@@ -1,0 +1,104 @@
+.double-range-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0.5em auto;
+  width: 170px !important;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+.range-silder {
+  position: relative;
+  display: block;
+  height: 25px;
+  width: 100% !important;
+  margin: 0 auto;
+}
+.range-input {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+}
+.range-input .separator {
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0 0.2em;
+}
+.range-input input {
+  min-width: 45%;
+}
+
+.range-silder::after {
+  box-sizing: border-box;
+  display: block;
+  height: 5px;
+  left: 0px;
+  position: absolute;
+  top: 11px;
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+  content: "";
+}
+
+.range-silder .paint {
+  box-sizing: border-box;
+  display: block;
+  height: 5px;
+  left: 45.3125px;
+  position: absolute;
+  top: 11px;
+  z-index: 10;
+  color: rgb(40, 40, 40);
+  background-color: var(--orangPrimary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.range-silder input {
+  position: absolute;
+  background-color: transparent;
+  outline: 0;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  -webkit-appearance: none;
+  overflow: visible;
+  border-radius: 0;
+  pointer-events: none;
+}
+
+.range-silder input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  background-color: var(--orangPrimary);
+}
+.range-silder input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.295);
+}
+.range-silder input[type="range"]::-moz-range-thumb {
+  pointer-events: auto;
+  height: 1.3em;
+  width: 1.3em;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  background-color: var(--orangPrimary);
+}
+.range-silder input[type="range"]::-moz-range-thumb:hover {
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.219);
+}
+.filter-group .separator {
+  margin: 0 5px;
+}
+
+.double-range-input input[type="number"] {
+  width: 5em;
+}

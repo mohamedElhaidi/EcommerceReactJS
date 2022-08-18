@@ -1,0 +1,110 @@
+.product-preview {
+  gap: 5px;
+  width: 300px;
+}
+.product-preview .mini-preview-wrap {
+  display: flex;
+
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 0.5em;
+  margin: 3px 0;
+  max-width: 100%;
+  padding: 0.2em 0;
+}
+
+.product-preview .main-preview {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 300px;
+
+  border: solid orange 2px;
+}
+
+.product-preview .mini-preview {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: solid orange 2px;
+}
+
+/* modal */
+.product-modal-preview-wrap {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 400;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.774);
+}
+.product-modal-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+
+  padding: 1em;
+}
+
+.product-modal-preview .main-preview {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.product-modal-preview .mini-preview-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 3px 0;
+}
+
+.product-modal-preview .mini-preview {
+  min-width: 4em;
+  min-height: 4em;
+  max-width: 4em;
+  max-height: 4em;
+  cursor: pointer;
+}
+
+.product-modal-preview .closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 401;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  padding: 1em;
+
+  font-size: 1.5em;
+  background-color: orange;
+  color: white;
+  text-align: center;
+}
+
+.product-modal-preview .closeButton {
+  display: flex;
+}
+
+@media all and (max-width: 500px) {
+  .product-modal-preview {
+    width: 100%;
+  }
+}

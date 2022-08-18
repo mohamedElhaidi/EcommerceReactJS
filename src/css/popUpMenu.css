@@ -1,0 +1,74 @@
+.popUpMenu {
+  position: relative;
+  width: fit-content;
+}
+
+.popUpMenu .hover-effect > *:hover {
+  background-color: var(--orangSecondery);
+}
+
+.popUpMenu button {
+  display: block;
+  border-style: none;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  background-color: inherit;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.popUpMenu .list {
+  display: none;
+  z-index: 21;
+}
+
+.popUpMenu .list > .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.158);
+  z-index: 20;
+}
+
+.popUpMenu .list ul {
+  position: absolute;
+  top: inherit;
+  bottom: inherit;
+  right: inherit;
+  left: inherit;
+  transform: inherit;
+  width: 200px;
+  list-style: none;
+  background-color: white;
+  color: rgb(56, 56, 56);
+  z-index: 99;
+}
+
+.popUpMenu .list.toggle {
+  display: block;
+}
+
+.popUpMenu li {
+  margin: 0.5em 0;
+  /* background-color: black; */
+}
+
+.popUpMenu li > * {
+  padding: 1em 1em;
+
+  width: 100%;
+  height: 100%;
+}
+
+.popUpMenu li a {
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+}
+
+.popUpMenu li a:visited {
+  color: currentColor;
+}

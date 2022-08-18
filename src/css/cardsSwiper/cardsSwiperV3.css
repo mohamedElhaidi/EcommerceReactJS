@@ -1,0 +1,139 @@
+.cards-swiper {
+  position: relative;
+  gap: 0.5em;
+  width: 100%;
+  /* height: 100px; */
+  margin: 0 auto;
+}
+
+.cards-swiper .cards {
+  height: 100%;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.cards-swiper .track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  transition-duration: 0.5s;
+}
+.cards-swiper .card {
+  /* position: relative;
+  min-width: 100%;
+  min-height: 100%; */
+  user-select: none;
+  padding: 0 0em;
+}
+
+.cards-swiper .dots {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cards-swiper .dot {
+  padding: 0.2em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  outline: black 1px solid;
+  cursor: pointer;
+  /* transition-duration: 150ms; */
+}
+
+.cards-swiper .dot.focused {
+  width: 2em;
+  height: 0.9em;
+  border-radius: 15px;
+  background-color: rgb(247, 199, 39);
+}
+
+.cards-swiper .track img {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cards-swiper img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.cards-swiper .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cards-swiper .arrow {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-color: rgba(63, 63, 63, 0.432);
+  width: 70px;
+  height: 70px;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.cards-swiper .arrow:hover {
+  transform: scale(1.1);
+}
+
+.cards-swiper .arrow svg {
+  width: 2rem;
+}
+
+.cards-swiper .arrow-left {
+  right: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .cards-swiper {
+    width: 100% !important;
+  }
+
+  .cards-swiper .cards {
+    border-radius: 0;
+  }
+
+  .cards-swiper .dot.focused {
+    width: 2em;
+    height: 0.5em;
+  }
+  .cards-swiper .dot {
+    left: 40%;
+    width: 0.5em;
+    height: 0.5em;
+  }
+
+  .cards-swiper .overlay {
+    width: 0px !important;
+    height: 0px !important;
+  }
+
+  .cards-swiper .arrows {
+    display: none;
+  }
+}

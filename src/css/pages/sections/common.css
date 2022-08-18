@@ -1,0 +1,41 @@
+:root {
+  --flashDeal-headerColor: rgb(133, 43, 16);
+}
+
+.page-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 1rem;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.page-section header {
+  padding: 0.5em 1em;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  color: rgb(7, 7, 7);
+
+  width: 100%;
+  z-index: 0;
+}
+.page-section .section-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.page-section > * {
+  padding: 0.3em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.page-section .section-see-more {
+  grid-column: 2;
+  font-size: 1.1em;
+  justify-self: end;
+  width: fit-content;
+}

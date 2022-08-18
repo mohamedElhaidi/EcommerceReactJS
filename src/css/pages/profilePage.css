@@ -1,0 +1,143 @@
+.account-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2em;
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em;
+  border-width: 0;
+  border-left: 5px;
+  border-style: solid;
+  border-color: blueviolet;
+}
+.account-info > * {
+  margin: 0.2em 0;
+}
+.pfp-wrap {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.pfp-wrap:hover .edit {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.pfp-wrap .edit {
+  display: none;
+  position: absolute;
+  bottom: -50px;
+  width: 100px;
+  height: 100px;
+  padding: 1em;
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.521);
+}
+
+.orderCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px;
+  width: 100%;
+  background-color: rgb(170, 170, 170);
+
+  color: white;
+  margin: 0.3em 0;
+}
+.orderCard .success {
+  background-color: rgb(0, 187, 72);
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  min-height: 50vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+.tabs-browser {
+  margin-right: 0.5em;
+  padding: 1em;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.tabs-browser ul {
+  width: 100%;
+  user-select: none;
+}
+.tabs-browser .TabBrowserItem {
+  max-width: 200px;
+  min-width: 200px;
+  padding: 1em 1em;
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  background-color: rgb(235, 144, 8);
+  user-select: none;
+}
+.tabs-browser li:hover {
+  background-color: rgba(255, 72, 0, 0.904);
+  cursor: pointer;
+}
+
+.boards {
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+
+.boards .board {
+  padding: 1em 1em;
+}
+
+.boards .board > h1 {
+  font-weight: 300;
+}
+
+.form-group {
+  display: flex;
+  font-size: 1em;
+  font-weight: 300;
+  gap: 1em;
+  margin: 1em;
+}
+.form-group label {
+  width: 100px;
+}
+
+.form-group input {
+  border: solid rgba(0, 0, 0, 0.493) 1px;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 300;
+  padding: 0.2em;
+}
+
+@media screen and (max-width: 700px) {
+  .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .tabs-browser {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0;
+  }
+  .TabBrowserItem {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}

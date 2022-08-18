@@ -1,0 +1,164 @@
+.CheckoutComponent-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+}
+.CheckoutComponent-wrap .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.788);
+  z-index: 1;
+}
+
+.CheckoutComponent-wrap .close-button {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  width: 5em;
+  height: 5em;
+
+  cursor: pointer;
+}
+.CheckoutComponent-wrap .close-button::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  transform: rotate(45deg);
+  background-color: orange;
+}
+.CheckoutComponent-wrap .close-button::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 5px;
+  transform: rotate(-45deg);
+  background-color: orange;
+}
+.CheckoutComponent-wrap .pages {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em 1em;
+  width: 50vw;
+  max-width: 700px;
+  max-height: 75vh;
+  min-height: 500px;
+  background-color: white;
+  border-radius: 5px;
+  outline: solid orange 3px;
+  box-shadow: rgba(0, 0, 0, 0.178) 0 0 15px 0;
+}
+.CheckoutComponent-wrap .pages > h1 {
+  font-weight: 300;
+}
+@media all and (max-width: 700px) {
+  .CheckoutComponent-wrap .pages {
+    width: 100%;
+  }
+}
+.CheckoutComponent-wrap .content {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.CheckoutComponent-wrap .track {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  transition-duration: 500ms;
+  height: 100%;
+}
+.CheckoutComponent-wrap .page-wrap {
+  min-width: 100%;
+  height: 100%;
+}
+.CheckoutComponent-wrap .page {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 1em;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.CheckoutComponent-wrap .page-header {
+  font-weight: 300;
+  font-size: 2.2em;
+}
+
+.CheckoutComponent-wrap .arrow {
+  position: absolute;
+  top: 50%;
+  width: 70px;
+  height: 100px;
+  cursor: pointer;
+}
+.CheckoutComponent-wrap .arrow::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: 2% center;
+  transform: translate(0, -50%) rotate(-45deg);
+  display: block;
+  content: "";
+  width: 4em;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.CheckoutComponent-wrap .arrow::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform-origin: 2% center;
+  transform: translate(0, -50%) rotate(45deg);
+  display: block;
+  content: "";
+  width: 4em;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.CheckoutComponent-wrap .arrow.left {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+.CheckoutComponent-wrap .arrow.right {
+  right: 0;
+  transform: translate(100%, -50%) rotate(180deg);
+}
+
+.delivery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em;
+  font-weight: 500;
+  background-color: rgba(255, 169, 10, 0.089);
+  border: solid orange 1px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}

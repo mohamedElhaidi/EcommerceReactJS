@@ -1,0 +1,31 @@
+:root {
+  --borderColor: rgb(250, 33, 33);
+  --shadowColor: rgba(250, 33, 33, 0.253);
+}
+.product-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 180px;
+  min-width: 180px;
+  font-size: 1rem;
+}
+.product-best {
+  border-top: solid var(--borderColor) 5px;
+  border-bottom: solid var(--borderColor) 5px;
+  border-left: solid var(--borderColor) 2px;
+  border-right: solid var(--borderColor) 2px;
+  box-shadow: var(--shadowColor) 0 0 5px 0;
+  border-radius: 10px;
+}
+.product-best::after {
+  display: block;
+  content: "Best deal";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0.3em;
+  border-radius: 0 0 5px 0;
+  background-color: var(--borderColor);
+  color: white;
+  font-weight: 500;
+}
