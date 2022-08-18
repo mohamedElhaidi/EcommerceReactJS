@@ -1,4 +1,4 @@
-import Joi from "react-joi";
+import Joi from "joi";
 export const registerSchema = Joi.object({
   name_register: Joi.string().alphanum().min(3).max(30).required().messages({
     "string.alphanum": `should contain alphabets and mumbers only`,
